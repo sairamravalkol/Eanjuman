@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+  
+<hibernate-mapping>  
+<class name="com.newbie.eanjuman.model.Address" table="Address">  
+          <id name="addressId">  
+           <generator class="org.hibernate.id.IncrementGenerator"></generator>
+          </id>  
+          <property name="address" column="Address" />  
+          <property name="phone1" column="Phone1" />  
+          <property name="phone2" column="Phone2"/>
+          <property name="dob" column="Date_Of_Birth"/>
+          <property name="city" column="City"/>
+          <property name="lastUpdate" column="Last_Update" />
+        
+          
+</class>  
+            
+</hibernate-mapping>  

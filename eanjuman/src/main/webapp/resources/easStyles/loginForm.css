@@ -1,0 +1,63 @@
+input[type=password], input[type=email]  {
+    
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    border: 2px solid steelblue;
+    font-size: 20px;
+
+}
+#loginFormTable input[type=submit], #loginFormTable input[type=reset] {
+ background-color:darkorange;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 10px;
+}
+#signup {
+    background-color:green;
+    color: white;
+    padding: 16px 32px;
+    text-decoration:none;
+    margin: 4px 2px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#loginFormTable {
+border: 1px solid darkolivegreen ;
+border-radius: 10px;
+margin-left: 30px;
+margin-top:10px;
+margin-bottom: 10px;
+margin-right:20px;
+margin-left: auto;
+margin-right: auto;
+width: 6em
+ 
+}
+#loginFormTable h3{
+margin-left: 20px;
+   }
+#welcome {
+    color:darkmagenta;
+    border:1px solid black;
+    background-color: cadetblue;
+}
+#loginForm {
+    margin-left: 10px;
+    margin-top:10px;
+    margin-bottom: 10px; 
+    margin-right:10px;
+}
+label {
+    font-size: 18px;
+  
+}
+a {
+    text-decoration: none;
+}

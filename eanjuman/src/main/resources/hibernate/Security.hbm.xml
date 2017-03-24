@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+	<class name="com.newbie.eanjuman.model.Security" table="Security">
+		<id name="securityId" >
+			<generator class="org.hibernate.id.IncrementGenerator"></generator>
+		</id>
+		<property name="securityName" column="Security_Name" />
+		<property name="active" column="Active" />
+		
+		<set name="accountHolders">
+			<key column="securityId" />
+			<one-to-many class="com.newbie.eanjuman.model.AccountHolder" />
+		</set>
+	</class>
+
+</hibernate-mapping>  

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+  
+<hibernate-mapping>  
+<class name="com.newbie.eanjuman.model.AccountHolder" table="AccountHolder">  
+          <id name="accHolderId">  
+           <generator class="org.hibernate.id.IncrementGenerator"></generator>
+          </id>  
+          <property name="firstName" column="First_Name" />  
+          <property name="lastName" column="Last_Name" />  
+          <property name="fatherName" column="Father_Name"/>
+          <property name="Active" column="Active"/>
+          <property name="lastUpdate" column="Last_Updated"/>
+          <many-to-one name="user">
+          <column name="userId"></column>
+          </many-to-one>
+          <many-to-one name="address" class="com.newbie.eanjuman.model.Address" >
+          <column name="addressId"></column>
+          </many-to-one>
+          <many-to-one name="security" class="com.newbie.eanjuman.model.Security">
+          <column name="securityId"></column>
+          </many-to-one>
+          
+          <set name="loans">
+           <key column="accHolderId"></key>
+           <one-to-many class="com.newbie.eanjuman.model.Loan"/>
+          </set>
+          
+          <set name="monthlyPayments">
+          <key column="accHolderId"></key>
+          <one-to-many class="com.newbie.eanjuman.model.MonthlyPayment"/>
+          </set>
+          
+        
+</class>  
+            
+</hibernate-mapping>  

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+  
+<hibernate-mapping>  
+<class name="com.newbie.eanjuman.model.BasicPay" table="BasicPay">  
+          <id name="basicPayId" column="BasicPay_Id">  
+           <generator class="org.hibernate.id.IncrementGenerator"></generator>
+          </id>  
+          <property name="BasicPay" column="Montly_Deposit" />  
+          <set name="monthlyPayments" cascade="all">
+          <key column="basicPayId"></key>
+          <one-to-many class="com.newbie.eanjuman.model.MonthlyPayment"/>
+          </set>
+ </class>  
+            
+</hibernate-mapping>  

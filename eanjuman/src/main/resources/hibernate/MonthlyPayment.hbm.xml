@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.newbie.eanjuman.model.MonthlyPayment" table="MonthlyPayment">
+		<id name="paymentId">
+			<generator class="org.hibernate.id.IncrementGenerator"></generator>
+		</id>
+		<property name="TotalAmount" column="Total_Amount" />
+		<property name="paymentDate" column="Payment_Date" />
+		<property name="lastUpdate" column="Last_Update" />
+		
+		
+		<many-to-one name="basicPay" class="com.newbie.eanjuman.model.BasicPay">
+			<column name="basicPayId"></column>
+		</many-to-one>
+		
+		<many-to-one name="loan" class="com.newbie.eanjuman.model.Loan">
+			<column name="loanId"></column>
+		</many-to-one>
+		<many-to-one name="accountHolder"
+			class="com.newbie.eanjuman.model.AccountHolder">
+			<column name="accHolderId"></column>
+		</many-to-one>
+		
+	</class>
+
+</hibernate-mapping>  
