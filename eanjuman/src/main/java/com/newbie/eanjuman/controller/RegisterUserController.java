@@ -15,14 +15,11 @@ import com.sun.istack.internal.logging.Logger;
 
 public class RegisterUserController implements Controller {
 	
-	RegisterUserService registerUserService;
-
-
-	private User user;
-	
-	
 	private static final Logger logger = Logger.getLogger(RegisterUserController.class);
 
+	RegisterUserService registerUserService;
+	private User user;
+	
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		if(request.getMethod().equals("GET")) {
 		

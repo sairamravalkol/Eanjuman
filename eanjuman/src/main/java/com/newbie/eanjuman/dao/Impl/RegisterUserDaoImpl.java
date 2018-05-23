@@ -10,6 +10,7 @@ import com.newbie.eanjuman.dao.RegisterUserDao;
 import com.newbie.eanjuman.model.User;
 import com.sun.istack.internal.logging.Logger;
 
+@SuppressWarnings("deprecation")
 public class RegisterUserDaoImpl extends  HibernateDaoSupport implements RegisterUserDao {
 
 	private static final Logger logger = Logger.getLogger(RegisterUserDaoImpl.class);

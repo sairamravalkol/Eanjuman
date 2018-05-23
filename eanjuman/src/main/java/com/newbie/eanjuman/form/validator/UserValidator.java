@@ -16,6 +16,7 @@ public class UserValidator implements Validator {
 				
 			User user = (User)command;
 			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "firstName", "required");
+			
 	}
 
 }

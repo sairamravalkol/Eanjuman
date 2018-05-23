@@ -26,7 +26,7 @@ public class LoginController implements Controller {
 		ModelAndView mav = new ModelAndView();
 		System.out.println(request.getParameter("email"));
 		System.out.println(request.getParameter("password"));
-		mav.setViewName("success");
+		mav.setViewName("home");
 		return mav;
 		
 	}

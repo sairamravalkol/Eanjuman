@@ -1,7 +1,7 @@
 function startTime() {
     var today = new Date();
     var dt = today.getDate();
-    var mth = today.getMonth();
+    var mth = today.getMonth()+1;
     var day = today.getDay();
     var year = today.getFullYear();
     var h = today.getHours();
@@ -10,7 +10,7 @@ function startTime() {
     m = checkTime(m);
     s = checkTime(s);
     document.getElementById('currentDate').innerHTML =
-   "Today is : "+day+" "+dt+"-"+ mth + "-" + year + " "+  h + ":" + m + ":" + s;
+   dt+"-"+ mth + "-" + year + " "+  h + ":" + m + ":" + s;
     var t = setTimeout(startTime, 500);
 }
 function checkTime(i) {
